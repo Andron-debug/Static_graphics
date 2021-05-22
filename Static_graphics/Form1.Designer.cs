@@ -36,7 +36,7 @@ namespace Static_graphics
             this.X_trackBar = new System.Windows.Forms.TrackBar();
             this.Y_trackBar = new System.Windows.Forms.TrackBar();
             this.Whide_trackBar = new System.Windows.Forms.TrackBar();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.colorDialog = new System.Windows.Forms.ColorDialog();
             this.Color_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.X_trackBar)).BeginInit();
@@ -116,6 +116,7 @@ namespace Static_graphics
             this.Color_button.TabIndex = 7;
             this.Color_button.Text = "Изменить цвет";
             this.Color_button.UseVisualStyleBackColor = true;
+            this.Color_button.Click += new System.EventHandler(this.Color_button_Click);
             // 
             // Form1
             // 
@@ -150,7 +151,7 @@ namespace Static_graphics
         private System.Windows.Forms.TrackBar X_trackBar;
         private System.Windows.Forms.TrackBar Y_trackBar;
         private System.Windows.Forms.TrackBar Whide_trackBar;
-        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.ColorDialog colorDialog;
         private System.Windows.Forms.Button Color_button;
     }
 }

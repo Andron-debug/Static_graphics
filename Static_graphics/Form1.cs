@@ -57,5 +57,14 @@ namespace Static_graphics
         {
             Draw();
         }
+
+        private void Color_button_Click(object sender, EventArgs e)
+        {
+            if (colorDialog.ShowDialog() == DialogResult.OK)
+            {
+                p.Color = colorDialog.Color;
+                Draw();
+            }
+        }
     }
 }
