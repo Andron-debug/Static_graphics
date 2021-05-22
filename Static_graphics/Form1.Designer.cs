@@ -83,9 +83,11 @@ namespace Static_graphics
             // X_trackBar
             // 
             this.X_trackBar.Location = new System.Drawing.Point(662, 60);
+            this.X_trackBar.Maximum = 6;
             this.X_trackBar.Name = "X_trackBar";
             this.X_trackBar.Size = new System.Drawing.Size(130, 56);
             this.X_trackBar.TabIndex = 4;
+            this.X_trackBar.Scroll += new System.EventHandler(this.X_trackBar_Scroll);
             // 
             // Y_trackBar
             // 
@@ -127,6 +129,7 @@ namespace Static_graphics
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.X_trackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Y_trackBar)).EndInit();
