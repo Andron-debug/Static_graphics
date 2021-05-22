@@ -92,9 +92,11 @@ namespace Static_graphics
             // Y_trackBar
             // 
             this.Y_trackBar.Location = new System.Drawing.Point(662, 143);
+            this.Y_trackBar.Maximum = 4;
             this.Y_trackBar.Name = "Y_trackBar";
             this.Y_trackBar.Size = new System.Drawing.Size(130, 56);
             this.Y_trackBar.TabIndex = 5;
+            this.Y_trackBar.Scroll += new System.EventHandler(this.Y_trackBar_Scroll);
             // 
             // Whide_trackBar
             // 

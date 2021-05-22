@@ -22,15 +22,18 @@ namespace Static_graphics
             InitializeComponent();
             p.Width = Whide_trackBar.Value;
             g = pictureBox1.CreateGraphics();
-           
+            Draw();
         }
         private void Draw()
         {
             g.Clear(System.Drawing.Color.White);
             for (int i = 0; i < X_trackBar.Value; i++)
             {
-                g.DrawEllipse(p, 20+100*i, 20, 100, 100);
-                g.DrawEllipse(p, 45+100*i, 45, 50, 50);
+                for (int j = 0; j < Y_trackBar.Value; j++)
+                {
+                    g.DrawEllipse(p, 20 + 100 * i, 20 + 100*j, 100, 100);
+                    g.DrawEllipse(p, 45 + 100 * i, 45+100*j, 50, 50);
+                }
             }
         }
 
@@ -47,7 +50,12 @@ namespace Static_graphics
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Draw();
+        }
 
+        private void Y_trackBar_Scroll(object sender, EventArgs e)
+        {
+            Draw();
         }
     }
 }
